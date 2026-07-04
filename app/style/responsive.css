@@ -1,0 +1,70 @@
+/* ---------- Desktop ---------- */
+
+.desktop-menu {
+  display: flex !important;
+}
+
+.mobile-menu-button {
+  display: none !important;
+}
+
+/* ---------- Tablet & Mobile ---------- */
+
+@media (max-width: 900px) {
+  .desktop-order-btn {
+  display: none !important;
+}
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .mobile-menu-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: 1 1 100% !important;
+  }
+
+  .hero-text {
+    margin: 0 auto;
+  }
+
+  .hero-buttons,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .section-padding {
+    padding: 80px 20px !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.4rem !important;
+  }
+
+  .hero-image {
+    max-width: 100% !important;
+  }
+}
+.footer-link:hover{
+    color:#F97316 !important;
+    padding-left:6px;
+    transition:all .3s ease;
+}
