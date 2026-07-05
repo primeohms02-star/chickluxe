@@ -9,8 +9,9 @@ export default function Hero() {
 
   return (
     <section
-      className="section-padding"
-      style={{
+  id="hero"
+  className="section-padding"
+  style={{
         minHeight: "78vh",
         background: darkMode
           ? "linear-gradient(to right, #0F1115, #1A1D23)"

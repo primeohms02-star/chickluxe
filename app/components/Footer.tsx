@@ -65,8 +65,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="CHICKLUXE"
-                width={240}
-                height={90}
+               width={0}
+height={0}
+sizes="100vw"
                 priority
                 style={{
                   width: "220px",

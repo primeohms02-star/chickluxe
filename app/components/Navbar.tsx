@@ -25,81 +25,6 @@ export default function Navbar() {
 
   return (
     <>
-{menuOpen && (
-  <div
-    className="mobile-menu"
-    style={{
-      position: "absolute",
-      top: "100%",
-      left: 0,
-      width: "100%",
-      background: darkMode ? "#0F1115" : "#FFFFFF",
-      borderTop: darkMode
-        ? "1px solid rgba(255,255,255,.08)"
-        : "1px solid rgba(0,0,0,.08)",
-      boxShadow: "0 15px 40px rgba(0,0,0,.15)",
-      padding: "25px",
-      display: "flex",
-      flexDirection: "column",
-      gap: "22px",
-      zIndex: 999,
-    }}
-  >
-    <a href="/" onClick={() => setMenuOpen(false)} style={linkStyle(darkMode)}>
-      Home
-    </a>
-
-    <a
-      href="#products"
-      onClick={() => setMenuOpen(false)}
-      style={linkStyle(darkMode)}
-    >
-      Collection
-    </a>
-
-    <a
-      href="#about"
-      onClick={() => setMenuOpen(false)}
-      style={linkStyle(darkMode)}
-    >
-      About
-    </a>
-
-    <a
-      href="#why-us"
-      onClick={() => setMenuOpen(false)}
-      style={linkStyle(darkMode)}
-    >
-      Why Us
-    </a>
-
-    <a
-      href="#contact"
-      onClick={() => setMenuOpen(false)}
-      style={linkStyle(darkMode)}
-    >
-      Contact
-    </a>
-
-   <a
-  className="desktop-order-btn"
-  href="https://wa.me/2349166964067"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        background: "#F97316",
-        color: "#fff",
-        textAlign: "center",
-        padding: "15px",
-        borderRadius: "999px",
-        textDecoration: "none",
-        fontWeight: 700,
-      }}
-    >
-      Order Now
-    </a>
-  </div>
-)}
       <header
         style={{
           position: "sticky",
@@ -131,45 +56,40 @@ export default function Navbar() {
             transition: ".35s ease",
           }}
         >
-          {/* Logo */}
-
-         <Link
-
-  href="/"
+          <Link
+            href="/"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginLeft: "-30px",
+            }}
+          >
+           <Image
+  src="/logo.png"
+  alt="CHICKLUXE"
+  width={0}
+  height={0}
+  sizes="100vw"
+  priority
   style={{
-    display: "flex",
-    alignItems: "center",
-    marginLeft: "-30px",
+    width: scrolled ? "290px" : "330px",
+    height: "auto",
+    objectFit: "contain",
+    marginTop: "18px",
+    transition: ".35s ease",
   }}
->
-            <Image
-              className="logo"
-              src="/logo.png"
-              alt="CHICKLUXE"
-              width={330}
-              height={100}
-              priority
-              style={{
-  width: scrolled ? "290px" : "330px",
-  height: "auto",
-  objectFit: "contain",
-  transition: ".35s ease",
-  marginTop: "18px",
-}}
-            />
+/>
           </Link>
 
-          {/* Desktop Navigation */}
-
           <nav
-  className="desktop-menu"
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "36px",
-  }}
->
-            <a href="/" style={linkStyle(darkMode)}>
+            className="desktop-menu"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "36px",
+            }}
+          >
+            <a href="#hero" style={linkStyle(darkMode)}>
               Home
             </a>
 
@@ -191,8 +111,7 @@ export default function Navbar() {
           </nav>
 
           {/* Right Side */}
-
-          <div
+                <div
             style={{
               display: "flex",
               alignItems: "center",
@@ -225,7 +144,8 @@ export default function Navbar() {
                 <Moon size={20} color="#111827" />
               )}
             </button>
-                        {/* Order Button */}
+
+            {/* Order Button */}
 
             <a
               className="desktop-order-btn"
@@ -251,10 +171,10 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
 
             <button
-  className="mobile-menu-button"
-  onClick={() => setMenuOpen(!menuOpen)}
-  style={{
-    display: "none",
+              className="mobile-menu-button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              style={{
+                display: "none",
                 background: "none",
                 border: "none",
                 cursor: "pointer",
@@ -284,7 +204,7 @@ export default function Navbar() {
             }}
           >
             <a
-              href="/"
+              href="#hero"
               style={linkStyle(darkMode)}
               onClick={() => setMenuOpen(false)}
             >
