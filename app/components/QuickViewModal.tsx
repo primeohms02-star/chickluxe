@@ -130,6 +130,7 @@ if (!product) return null;
  ease:"easeOut"
 }}
  style={{
+  position: "relative",
   width: "100%",
   maxWidth: "1100px",
 
@@ -157,6 +158,43 @@ if (!product) return null;
     : "1px solid rgba(0,0,0,.06)",
 }}
 >
+  {/* Close Button */}
+
+<motion.button
+  whileHover={{
+    scale: 1.08,
+    rotate: 90,
+  }}
+  whileTap={{
+    scale: 0.92,
+  }}
+  onClick={onClose}
+  style={{
+    position: "absolute",
+    top: "18px",
+    right: "18px",
+    width: "46px",
+    height: "46px",
+    borderRadius: "50%",
+    border: "none",
+    cursor: "pointer",
+    zIndex: 100,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: darkMode
+      ? "rgba(30,30,30,.95)"
+      : "rgba(255,255,255,.95)",
+    color: theme.text,
+    fontSize: "28px",
+    fontWeight: 500,
+    boxShadow: darkMode
+      ? "0 10px 25px rgba(0,0,0,.45)"
+      : "0 10px 25px rgba(0,0,0,.15)",
+  }}
+>
+  ×
+</motion.button>
           {/* LEFT */}
 
           <div

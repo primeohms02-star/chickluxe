@@ -3,7 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
 import { useTheme } from "@/app/context/ThemeContext";
 import { colors } from "@/app/theme/colors";
 
@@ -66,22 +71,9 @@ export default function Footer() {
                 style={{
                   width: "220px",
                   height: "auto",
-                  marginBottom: "22px",
                 }}
               />
             </motion.div>
-
-            <p
-              style={{
-                color: theme.textSecondary,
-                lineHeight: "1.9",
-                fontSize: "16px",
-                marginTop: "20px",
-              }}
-            >
-              Premium handbags curated for elegant women who appreciate timeless
-              luxury, exceptional quality and effortless style.
-            </p>
           </div>
 
           {/* Quick Links */}
@@ -181,6 +173,7 @@ export default function Footer() {
               style={{
                 display: "flex",
                 gap: "15px",
+                alignItems: "center",
               }}
             >
               <motion.a
@@ -188,6 +181,7 @@ export default function Footer() {
                 whileTap={{ scale: 0.95 }}
                 href="https://instagram.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 style={socialStyle}
               >
                 <FaInstagram size={20} />
@@ -198,6 +192,7 @@ export default function Footer() {
                 whileTap={{ scale: 0.95 }}
                 href="https://facebook.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 style={socialStyle}
               >
                 <FaFacebookF size={20} />
@@ -212,6 +207,17 @@ export default function Footer() {
                 style={socialStyle}
               >
                 <FaWhatsapp size={20} />
+              </motion.a>
+
+              <motion.a
+                whileHover={{ y: -4, scale: 1.08 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://www.tiktok.com/@CHICKLUXE"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={socialStyle}
+              >
+                <SiTiktok size={20} />
               </motion.a>
             </div>
           </div>

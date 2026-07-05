@@ -124,7 +124,7 @@ export default function Navbar() {
             maxWidth: "1400px",
             margin: "0 auto",
             height: scrolled ? "78px" : "92px",
-            padding: "0 32px",
+            padding: "0 6px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -133,13 +133,15 @@ export default function Navbar() {
         >
           {/* Logo */}
 
-          <Link
-            href="/"
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
+         <Link
+
+  href="/"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    marginLeft: "-30px",
+  }}
+>
             <Image
               className="logo"
               src="/logo.png"
@@ -148,11 +150,12 @@ export default function Navbar() {
               height={100}
               priority
               style={{
-                width: scrolled ? "290px" : "330px",
-                height: "auto",
-                objectFit: "contain",
-                transition: ".35s ease",
-              }}
+  width: scrolled ? "290px" : "330px",
+  height: "auto",
+  objectFit: "contain",
+  transition: ".35s ease",
+  marginTop: "18px",
+}}
             />
           </Link>
 

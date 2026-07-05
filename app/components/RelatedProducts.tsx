@@ -1,11 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import products from "../data/products";
+import { useTheme } from "@/app/context/ThemeContext";
+import { colors } from "@/app/theme/colors";
 
 type Props = {
   currentSlug: string;
 };
 
 export default function RelatedProducts({ currentSlug }: Props) {
+  const { darkMode } = useTheme();
+  const theme = darkMode ? colors.dark : colors.light;
+
   const relatedProducts = products
     .filter((product) => product.slug !== currentSlug)
     .slice(0, 3);
@@ -21,7 +28,8 @@ export default function RelatedProducts({ currentSlug }: Props) {
           textAlign: "center",
           fontSize: "40px",
           marginBottom: "50px",
-          color: "#111",
+          color: theme.text,
+          transition: "all .35s ease",
         }}
       >
         You May Also Like
@@ -38,10 +46,12 @@ export default function RelatedProducts({ currentSlug }: Props) {
           <div
             key={product.id}
             style={{
-              background: "#fff",
+              background: theme.card,
+              border: `1px solid ${theme.border}`,
               borderRadius: "20px",
               overflow: "hidden",
-              boxShadow: "0 10px 30px rgba(0,0,0,.08)",
+              boxShadow: theme.shadow,
+              transition: "all .35s ease",
             }}
           >
             <Link href={`/products/${product.slug}`}>
@@ -67,7 +77,7 @@ export default function RelatedProducts({ currentSlug }: Props) {
                 href={`/products/${product.slug}`}
                 style={{
                   textDecoration: "none",
-                  color: "#111",
+                  color: theme.text,
                 }}
               >
                 <h3>{product.name}</h3>
@@ -89,12 +99,13 @@ export default function RelatedProducts({ currentSlug }: Props) {
                 style={{
                   display: "inline-block",
                   marginTop: "20px",
-                  background: "#111",
+                  background: theme.accent,
                   color: "#fff",
                   textDecoration: "none",
                   padding: "12px 30px",
                   borderRadius: "40px",
                   fontWeight: "bold",
+                  transition: "all .35s ease",
                 }}
               >
                 View Product
