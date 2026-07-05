@@ -17,26 +17,58 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://chickluxe.store"),
 
-  title: "CHICKLUXE | Premium Luxury Handbags",
+  title: {
+    default: "CHICKLUXE | Premium Luxury Handbags in Nigeria",
+    template: "%s | CHICKLUXE",
+  },
 
   description:
-    "Discover elegant handbags crafted for confident women who love timeless fashion, premium quality and everyday luxury.",
+    "Shop premium luxury handbags for women in Nigeria. Discover elegant totes, shoulder bags, crossbody bags and timeless fashion accessories with nationwide delivery.",
+
+  applicationName: "CHICKLUXE",
 
   keywords: [
-    "luxury handbags",
-    "designer handbags",
-    "women handbags",
-    "fashion bags",
-    "premium handbags",
+    "Luxury handbags Nigeria",
+    "Premium handbags Nigeria",
+    "Designer handbags Lagos",
+    "Women's handbags",
+    "Luxury bags",
+    "Crossbody bags",
+    "Shoulder bags",
+    "Tote bags",
+    "Elegant handbags",
+    "Fashion accessories",
+    "Luxury fashion Nigeria",
     "CHICKLUXE",
-    "Nigeria handbags",
   ],
 
   authors: [
     {
       name: "CHICKLUXE",
+      url: "https://chickluxe.store",
     },
   ],
+
+  creator: "CHICKLUXE",
+  publisher: "CHICKLUXE",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
+  },
 
   manifest: "/site.webmanifest",
 
@@ -56,30 +88,34 @@ export const metadata: Metadata = {
         type: "image/png",
       },
     ],
+
     shortcut: "/favicon.ico",
+
     apple: "/apple-touch-icon.png",
   },
 
   openGraph: {
-    title: "CHICKLUXE | Premium Luxury Handbags",
+    title: "CHICKLUXE | Premium Luxury Handbags in Nigeria",
+
     description:
-      "Elegant handbags for confident women. Premium quality. Nationwide delivery.",
+      "Discover premium handbags for confident women. Elegant designs, luxury craftsmanship and nationwide delivery across Nigeria.",
 
     url: "https://chickluxe.store",
 
     siteName: "CHICKLUXE",
+
+    locale: "en_US",
+
+    type: "website",
 
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CHICKLUXE Luxury Handbags",
+        alt: "CHICKLUXE Premium Luxury Handbags",
       },
     ],
-
-    locale: "en_US",
-    type: "website",
   },
 
   twitter: {
@@ -88,10 +124,12 @@ export const metadata: Metadata = {
     title: "CHICKLUXE | Premium Luxury Handbags",
 
     description:
-      "Elegant handbags for confident women. Premium quality. Nationwide delivery.",
+      "Premium handbags crafted for confident women. Nationwide delivery across Nigeria.",
 
     images: ["/og-image.jpg"],
   },
+
+  category: "Fashion",
 };
 
 export default function RootLayout({
@@ -120,29 +158,35 @@ export default function RootLayout({
 </>
         <ThemeProvider>{children}</ThemeProvider>
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Store",
-              name: "CHICKLUXE",
-              url: "https://chickluxe.store",
-              logo: "https://chickluxe.store/logo.png",
-              image: "https://chickluxe.store/og-image.jpg",
-              description:
-                "Premium luxury handbags for elegant women. Nationwide delivery across Nigeria.",
-              telephone: "+2349166964067",
-              email: "chickluxehq@gmail.com",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Lagos",
-                addressCountry: "NG",
-              },
-            }),
-          }}
-        />
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Store",
+      name: "CHICKLUXE",
+      url: "https://chickluxe.store",
+      logo: "https://chickluxe.store/logo.png",
+      image: "https://chickluxe.store/og-image.jpg",
+      description:
+        "Premium luxury handbags for elegant women with nationwide delivery across Nigeria.",
+      telephone: "+2349166964067",
+      email: "chickluxehq@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Lagos",
+        addressCountry: "NG",
+      },
+      areaServed: "Nigeria",
+      priceRange: "$$",
+      sameAs: [
+        "https://www.instagram.com/_chickluxe"
+      ]
+    }),
+  }}
+/>
+
       </body>
     </html>
   );
-}
+}  
