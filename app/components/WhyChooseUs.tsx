@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
         </p>
       </motion.div>
 
-      <div
+      <div className="boutique-info-grid"
         style={{
           maxWidth: "1200px",
           margin: "0 auto",

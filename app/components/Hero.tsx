@@ -13,8 +13,8 @@ export default function Hero() {
         <a className="boutique-action" href="#products">Shop the collection ↓</a>
       </div>
       <Link className="boutique-feature" href={`/products/${bag.slug}`}>
-        <Image src={bag.image} alt={bag.name} width={760} height={760} sizes="(max-width: 700px) 100vw, 50vw" priority />
-        <span>{bag.name} <strong>{bag.price} ↗</strong></span>
+        <Image src={bag.image} alt={bag.name} width={760} height={1012} unoptimized sizes="(max-width: 700px) 100vw, 50vw" priority />
+        <span>{bag.name} <strong>↗</strong></span>
       </Link>
     </section>
   );

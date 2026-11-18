@@ -23,7 +23,7 @@ export default function Products() {
       <div className="boutique-grid">{visible.map(bag => (
         <article key={bag.slug}>
           <Link href={`/products/${bag.slug}`}>
-            <Image src={bag.image} alt={bag.name} width={600} height={600} sizes="(max-width: 560px) 94vw, (max-width: 900px) 46vw, 30vw" />
+            <Image src={bag.image} alt={bag.name} unoptimized width={600} height={600} sizes="(max-width: 560px) 46vw, (max-width: 900px) 46vw, 30vw" />
             <small>{bag.size} · {bag.material}</small>
             <h3>{bag.name}</h3>
           </Link>

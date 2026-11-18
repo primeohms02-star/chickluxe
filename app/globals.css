@@ -203,3 +203,20 @@ body {
 @media(max-width:900px){.boutique-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.boutique-hero{grid-template-columns:1fr;gap:26px}}
 @media(max-width:560px){.boutique-grid{grid-template-columns:1fr}}
+
+.boutique-feature {display:block;width:min(100%,350px);justify-self:center}
+.boutique-feature img {width:100%;height:auto;aspect-ratio:auto;background:transparent;border-radius:24px;box-shadow:0 16px 28px -18px rgba(55,32,16,.45);animation:tote-float 5s ease-in-out infinite}
+.boutique-feature span {margin-top:8px;border:0}
+@keyframes tote-float {50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.boutique-feature img{animation:none}}
+.boutique-shop {max-width:1200px}
+.boutique-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.boutique-grid article {display:flex;flex-direction:column;min-width:0}
+.boutique-grid article>a {flex:1}
+.boutique-grid img {height:clamp(160px,20vw,240px);border-radius:14px}
+.boutique-grid h3 {font-size:clamp(1.05rem,2vw,1.4rem)}
+.boutique-buttons {gap:6px}
+.boutique-info-grid {width:100%;max-width:1080px!important;margin-inline:auto!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;align-items:stretch}
+.boutique-info-grid>div {padding:clamp(16px,2.2vw,26px)!important;min-width:0;overflow-wrap:anywhere}
+@media(max-width:760px){.boutique-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}.boutique-info-grid{grid-template-columns:1fr!important}.boutique-feature{width:min(82%,300px)}}
+@media(max-width:370px){.boutique-buttons button{font-size:.8rem;padding:8px}}

@@ -59,7 +59,7 @@ export default function Contact() {
         </p>
 
         <div
-  className="contact-grid"
+  className="contact-grid boutique-info-grid"
   style={{
     display: "grid",
             gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
