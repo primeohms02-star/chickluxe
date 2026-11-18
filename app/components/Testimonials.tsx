@@ -89,7 +89,7 @@ export default function Testimonials() {
         </motion.div>
 
        <div
-  className="testimonials-grid"
+  className="testimonials-grid boutique-info-grid"
   style={{
     display: "grid",
             gridTemplateColumns: "repeat(auto-fit,minmax(330px,1fr))",
